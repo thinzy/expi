@@ -15,5 +15,5 @@ client.on('message', message => {
     if (message.content === '>tussle') {
     	message.reply(`ya wanna tussle, ${user}?`);
   	}
-
+});
 client.login(process.env.BOT_TOKEN);

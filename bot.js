@@ -41,8 +41,8 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === '>rsummit') {
         message.reply(`${image}`);
-        var image = images[Math.floor(Math.random() * (images.length))]
     }
+    var image = images[Math.floor(Math.random() * (images.length))]
 });    
 
 

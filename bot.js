@@ -42,8 +42,11 @@ client.on('message', message => {
     if (message.content === '>rsummit') {
         message.reply(`${image}`);
     }
-    var image = images[Math.floor(Math.random() * (images.length))]
 });    
-
+client.on('message', message => {
+    if (message.content === '>rsummit') {
+        images[Math.floor(Math.random() * (images.length))];
+    }
+});  
 
 client.login(process.env.BOT_TOKEN);

@@ -2,7 +2,7 @@
 {
   "name": "Expi",
   "description": "Official Mount Kilimanjaro Discord Bot",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"

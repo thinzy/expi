@@ -1,15 +1,15 @@
 var d = new Date();
 var user = "<@userID>";
-int 1 = 'https://imgur.com/mETXc2R';
-int 2 = 'https://imgur.com/YJvo7Fb';
-int 3 = 'https://imgur.com/2l52LK4';
-int 4 = 'https://imgur.com/CYxOhyC';
-int 5 = 'https://imgur.com/pt0Kd82';
-int 6 = 'https://imgur.com/ExuGbkZ';
-int 7 = 'https://imgur.com/D9dn2yy';
-int 8 = 'https://imgur.com/gluYJeT';
-int 9 = 'https://imgur.com/8AiNyVc';
-int 10 = 'https://imgur.com/UtgK0tJ';
+var '1' = 'https://imgur.com/mETXc2R';
+var '2' = 'https://imgur.com/YJvo7Fb';
+var '3' = 'https://imgur.com/2l52LK4';
+var '4' = 'https://imgur.com/CYxOhyC';
+var '5' = 'https://imgur.com/pt0Kd82';
+var '6' = 'https://imgur.com/ExuGbkZ';
+var '7' = 'https://imgur.com/D9dn2yy';
+var '8' = 'https://imgur.com/gluYJeT';
+var '9' = 'https://imgur.com/8AiNyVc';
+var '10' = 'https://imgur.com/UtgK0tJ';
 const Discord = require('discord.js');
 const client = new Discord.Client();
 

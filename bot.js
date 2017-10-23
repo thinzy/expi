@@ -8,7 +8,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-  bot.user.setGame('Climbing a mountain')
+  client.user.setGame('Climbing a mountain')
 })
 
 client.on('message', message => {

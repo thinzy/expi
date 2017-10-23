@@ -29,7 +29,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
     if (message.content === '>date') {
-    	message.reply(d);
+    	message.reply(${d});
   	}
 });
 

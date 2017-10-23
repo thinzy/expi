@@ -7,7 +7,7 @@ client.on('ready', () => {
     console.log('Ready for expeditions!');
 });
 
-bot.on('ready', () => {
+client.on('ready', () => {
   bot.user.setGame('Climbing a mountain')
 })
 

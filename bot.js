@@ -8,7 +8,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-});
+
 client.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `>`

@@ -23,12 +23,12 @@ client.on('message', message => {
   	}
 });
 client.on('message', message => {
-    if (message.content === '>group' {
+    if (message.content === '>group') {
     	message.reply('https://www.roblox.com/My/Groups.aspx?gid=3457860');
   	}
 });
 client.on('message', message => {
-    if (message.content === '>date' {
+    if (message.content === '>date') {
     	message.reply(d);
   	}
 });

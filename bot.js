@@ -1,6 +1,8 @@
 var d = new Date();
 var user = "<@userID>";
 client.login(process.env.BOT_TOKEN);
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
 });
 bot.on('message', function (user, userID, channelID, message, evt) {

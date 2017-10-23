@@ -7,6 +7,10 @@ client.on('ready', () => {
     console.log('Ready for expeditions!');
 });
 
+bot.on('ready', () => {
+  bot.user.setGame('Climbing a mountain')
+})
+
 client.on('message', message => {
     if (message.content === '>ping') {
     	message.reply(':ping_pong: pong!');

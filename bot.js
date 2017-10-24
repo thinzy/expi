@@ -38,7 +38,7 @@ client.on('message', message => {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
     if (message.content === '>climbers') {
-      message.reply(`${members = eval server.members.length}`);
+      message.reply(`${forceFetchUser}`);
     }
 });    
  

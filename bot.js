@@ -62,10 +62,6 @@ client.on(`message`, async (message) => {
 		   .setDescription(text);
 		   message.channel.send("@climbers")
 		   message.channel.send({embed})
-                   .then(function (message) {
-                   message.react("👍")
-                   message.react("👎")
-		   })
-
 }
+
 client.login(process.env.BOT_TOKEN);

@@ -42,7 +42,7 @@ client.on('message', message => {
     if (message.content === '>yorn') {
       let modRole = message.guild.roles.find("name", "Developer");
       if(message.member.roles.has(modRole.id)) {
-      let announcement = args.join(" ");
+      let announcement = arguments.join(" ");
       const embed = new Discord.RichEmbed()
       .setColor(0x00AE86)
       .setTimestamp()

@@ -13,6 +13,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var args = Array.prototype.slice.call(arguments);
 
+{
+exports.requireDepth += 1;
+return self.require(path);
+} finally {
+exports.requireDepth -= 1;
+}
+
 client.on('ready', () => {
   client.user.setGame(`Climbing a mountain`);
   console.log('Ready for expeditions!');

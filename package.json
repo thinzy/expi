@@ -4,6 +4,7 @@
   "description": "Official Mount Kilimanjaro Discord Bot",
   "version": "0.0.0",
   "main": "bot.js",
+  "prefix": ">",
   "scripts": {
     "start": "node bot.js"
   },

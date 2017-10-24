@@ -11,6 +11,7 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/UtgK0tJ'];
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var args = Array.prototype.slice.call(arguments);
 
 client.on('ready', () => {
   client.user.setGame(`Climbing a mountain`);
@@ -42,7 +43,7 @@ client.on('message', message => {
     if (message.content === '>yorn') {
       let modRole = message.guild.roles.find("name", "Developer");
       if(message.member.roles.has(modRole.id)) {
-      let announcement = arguments.join(" ");
+      let announcement = args.join(" ");
       const embed = new Discord.RichEmbed()
       .setColor(0x00AE86)
       .setTimestamp()

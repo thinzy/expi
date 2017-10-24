@@ -38,7 +38,7 @@ client.on('message', message => {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
     if (message.content === '>climbers') {
-      var users = [client.users.get("id", 11238414)];
+      var users = [server.users.get("id", 11238414)];
       message.reply(`${users[users.length]}`);
     }
     

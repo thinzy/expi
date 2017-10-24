@@ -9,7 +9,6 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/gluYJeT',
               'https://imgur.com/8AiNyVc',
               'https://imgur.com/UtgK0tJ'];
-console.log(images.length);
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -18,7 +17,7 @@ client.on('ready', () => {
   console.log('Ready for expeditions!');
   const args = message.content.slice(package.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-});
+})
 
 client.on('message', message => {
     if (message.content === '>ping') {

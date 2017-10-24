@@ -38,7 +38,7 @@ client.on('message', message => {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
     if (message.content === '>climbers') {
-      message.reply(`${members[client.channels.getAll("name", "general");]}`);
+      message.reply(`${members[client.channels.getAll("name", "general")]}`);
     }
 });    
  

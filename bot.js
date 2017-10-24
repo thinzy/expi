@@ -5,7 +5,7 @@ console.log(images.length);
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-unction rand(images){
+function rand(images){
     return var image = items[~~(Math.random() * images.length)];
 }
 

@@ -40,11 +40,19 @@ client.on('message', message => {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
     if (message.content === '>yorn') {
-      message.reply('test')
+      let modRole = message.guild.roles.find("name", "Developer");
+      if(message.member.roles.has(modRole.id)) {
+      let announcement = args.join(" ");
+      const embed = new Discord.RichEmbed()
+      .setColor(0x00AE86)
+      .setTimestamp()
+      .addField(`New Announcement by ${message.author.username}`, `${announcement}`)
+      client.channels.find("name", "bot_testing_room_2").sendEmbed(embed);
+      message.channel.sendMessage(`:ok_hand: Your very important message has been sent to #Announcements`)
       .then(function (message) {
       message.react("👍")
       message.react("👎")
-    })}
+      }})}
 });    
  
 client.login(process.env.BOT_TOKEN);

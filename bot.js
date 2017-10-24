@@ -15,8 +15,6 @@ const client = new Discord.Client();
 client.on('ready', () => {
   client.user.setGame(`Climbing a mountain`);
   console.log('Ready for expeditions!');
-  const args = message.content.slice(package.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
 })
 
 client.on('message', message => {
@@ -41,11 +39,8 @@ client.on('message', message => {
     if (message.content === '>climbers') {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
-    if (command === 'yorn') {
-      const sayMessage = args.join(" ");
-      message.delete().catch(O_o=>{}); 
-      message.channel.send(sayMessage);
-      then( m => m.react(':thumbs_up:', 'thumbs_down:'));
+    if (message.content === '>yorn') {
+      message.reply('test').then( m => m.react(':thumbs_up:', 'thumbs_down:'));
     }
 });    
  

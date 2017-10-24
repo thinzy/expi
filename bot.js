@@ -48,7 +48,7 @@ client.on('message', message => {
       .setColor(0x00AE86)
       .setTimestamp()
       .addField(`Yes or No by ${message.author.username}`, `${announcement}`)
-      client.channels.find("name", "bot_testing_room_2").sendEmbed(embed)
+      client.channels.find("name", "announcements").sendEmbed(embed)
       .then(function (message) {
       message.react("👍")
       message.react("👎")

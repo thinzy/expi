@@ -41,7 +41,7 @@ client.on('message', message => {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
 
-  
+});  
   client.on(`message`, message => {
     if (message.content === '>yorn') {
       let modRole = message.guild.roles.find("name", "Developer");
@@ -57,6 +57,6 @@ client.on('message', message => {
       message.react("👎")
       })}}
 });
-});    
+
  
 client.login(process.env.BOT_TOKEN);

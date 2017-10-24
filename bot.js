@@ -11,10 +11,10 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/UtgK0tJ'];
 console.log(images.length);
 const Discord = require('discord.js');
-const client = new Discord.Client('forceFetchUsers');
+const client = new Discord.Client();
 
 client.on('ready', () => {
-  client.user.setGame('Climbing a mountain');
+  client.user.setGame(`Climbing a mountain`);
   console.log('Ready for expeditions!');
 })
 
@@ -38,8 +38,7 @@ client.on('message', message => {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
     if (message.content === '>climbers') {
-      var users = [client.users.get("id", 11238414)];
-      message.reply(`${users[users.length]}`);
+      message.reply(`${guild.memberCount}`);
     }
     
 });    

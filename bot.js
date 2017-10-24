@@ -38,7 +38,7 @@ client.on('message', message => {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
     if (message.content === '>climbers') {
-      message.reply(`${message.guild.memberCount}`);
+      message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
     
 });    

@@ -6,7 +6,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 function rand(images){
-    return var image = items[~~(Math.random() * images.length)];
+    return items[~~(Math.random() * images.length)];
 }
 
 client.on('ready', () => {
@@ -31,7 +31,7 @@ client.on('message', message => {
     	message.reply(`${d}`);
   	}
     if (message.content === '>rsummit') {
-      message.reply(`${image}`);
+      message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
 });    
  

@@ -40,8 +40,11 @@ client.on('message', message => {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
     if (message.content === '>yorn') {
-      message.reply('test').then( m => m.react(':thumbs_up:'));
-    }
+      message.reply('test')
+      .then(function (message) {
+      message.react("👍")
+      message.react("👎")
+    }}
 });    
  
 client.login(process.env.BOT_TOKEN);

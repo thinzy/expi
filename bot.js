@@ -42,7 +42,7 @@ client.on('message', message => {
     }
 });
   
-client.on("message", async (message) => {
+client.on(`message`, async (message) => {
 	if (message.author.bot) return;
 	if (!message.content.startsWith(prefix)) return;
 	
@@ -62,10 +62,10 @@ client.on("message", async (message) => {
 		   .setDescription(text);
 		   message.channel.send("@climbers")
 		   message.channel.send({embed})
-       .then(function (message) {
-       message.react("👍")
-       message.react("👎")
-	   }
+                   .then(function (message) {
+                   message.react("👍")
+                   message.react("👎")
+		   }
 
 });  
  

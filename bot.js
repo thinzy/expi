@@ -40,7 +40,7 @@ client.on('message', message => {
     if (message.content === '>climbers') {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
-});
+};
   
 client.on(`message`, async (message) => {
 	if (message.author.bot) return;

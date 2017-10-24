@@ -5,6 +5,10 @@ console.log(images.length);
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+var image = function rand(images){
+    return items[~~(Math.random() * images.length)];
+}
+
 client.on('ready', () => {
   client.user.setGame('Climbing a mountain');
   console.log('Ready for expeditions!');
@@ -28,7 +32,6 @@ client.on('message', message => {
   	}
     if (message.content === '>rsummit') {
       message.reply(`${image}`);
-      return this var image = images[Math.floor(Math.random() * (images.length))];
     }
 });    
  

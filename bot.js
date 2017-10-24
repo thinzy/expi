@@ -40,6 +40,9 @@ client.on('message', message => {
     if (message.content === '>climbers') {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
+
+  
+  client.on(`message`, message => {
     if (message.content === '>yorn') {
       let modRole = message.guild.roles.find("name", "Developer");
       if(message.member.roles.has(modRole.id)) {
@@ -52,8 +55,8 @@ client.on('message', message => {
       .then(function (message) {
       message.react("👍")
       message.react("👎")
-      message.channel.send(`:ok_hand: Your very important message has been sent to #Announcements`)
       })}}
+}
 });    
  
 client.login(process.env.BOT_TOKEN);

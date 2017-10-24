@@ -10,7 +10,6 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/8AiNyVc',
               'https://imgur.com/UtgK0tJ'];
 console.log(images.length);
-var members = server.members.length
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -39,7 +38,7 @@ client.on('message', message => {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
     if (message.content === '>climbers') {
-      message.reply(`${members}`);
+      message.reply(`${members.filter(m => m.presence.status === 'online')}`);
     }
 });    
  

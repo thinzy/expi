@@ -52,7 +52,7 @@ client.on('message', message => {
       message.react("👍")
       message.react("👎")
       message.channel.sendMessage(`:ok_hand: Your very important message has been sent to #Announcements`)
-      })})}
+      })}}
 });    
  
 client.login(process.env.BOT_TOKEN);

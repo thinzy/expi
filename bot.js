@@ -40,7 +40,7 @@ client.on('message', message => {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
     if (message.content === '>yorn') {
-      message.reply('test').then( m => m.react(':thumbs_up:', 'thumbs_down:'));
+      message.reply('test').then( m => m.react(':thumbs_up:'));
     }
 });    
  

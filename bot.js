@@ -12,8 +12,13 @@ var images = ['https://imgur.com/mETXc2R',
 console.log(images.length);
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
+
+client.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.content.indexOf(config.prefix) !== 0) return;
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+})
 
 client.on('ready', () => {
   client.user.setGame(`Climbing a mountain`);

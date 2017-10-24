@@ -40,11 +40,12 @@ client.on('message', message => {
     if (message.content === '>climbers') {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
-    if(message.content === '>yorn') {
-    const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{}); 
-    message.channel.send(sayMessage);
-    then( m => m.react(':thumbs_up:', 'thumbs_down:'));
+    if (message.content === '>yorn') {
+      const sayMessage = args.join(" ");
+      message.delete().catch(O_o=>{}); 
+      message.channel.send(sayMessage);
+      then( m => m.react(':thumbs_up:', 'thumbs_down:'));
+    }
 });    
  
 client.login(process.env.BOT_TOKEN);

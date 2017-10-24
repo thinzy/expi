@@ -37,6 +37,9 @@ client.on('message', message => {
     if (message.content === '>rsummit') {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
+    if (message.content === '>climbers') {
+      message.reply(`${server.members.length}`);
+    }
 });    
  
 client.login(process.env.BOT_TOKEN);

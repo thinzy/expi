@@ -67,8 +67,5 @@ client.on(`message`, async (message) => {
                    message.react("👎")
 		   })
 
-};  
- 
-
- 
+}
 client.login(process.env.BOT_TOKEN);

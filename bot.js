@@ -1,6 +1,6 @@
 var d = new Date();
 var images = ['https://imgur.com/mETXc2R', 'https://imgur.com/YJvo7Fb', 'https://imgur.com/2l52LK4', 'https://imgur.com/CYxOhyC', 'https://imgur.com/pt0Kd82', 'https://imgur.com/ExuGbkZ', 'https://imgur.com/D9dn2yy', 'https://imgur.com/gluYJeT', 'https://imgur.com/8AiNyVc', 'https://imgur.com/UtgK0tJ'];
-const image = images[Math.floor(Math.random() * (images.length))];
+var image = images[Math.floor(Math.random() * (images.length))];
 console.log(images.length);
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -28,6 +28,7 @@ client.on('message', message => {
   	}
     if (message.content === '>rsummit') {
       message.reply(`${image}`);
+      return this var image = images[Math.floor(Math.random() * (images.length))];
     }
 });    
  

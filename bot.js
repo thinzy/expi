@@ -40,7 +40,7 @@ client.on('message', message => {
     if (message.content === '>climbers') {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
-    if (message.content === '>yorn') {
+    if (command === 'yorn') {
       const args = message.content.slice(package.prefix.length).trim().split(/ +/g);
       const command = args.shift().toLowerCase();
       const sayMessage = args.join(" ");

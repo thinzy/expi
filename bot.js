@@ -11,14 +11,7 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/UtgK0tJ'];
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var args = Array.prototype.slice.call(arguments);
-
-{
-exports.requireDepth += 1;
-return self.require(path);
-} finally {
-exports.requireDepth -= 1;
-}
+const prefix = ">"
 
 client.on('ready', () => {
   client.user.setGame(`Climbing a mountain`);
@@ -47,23 +40,35 @@ client.on('message', message => {
     if (message.content === '>climbers') {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
+});
+  
+client.on("message", async (message) => {
+	if (message.author.bot) return;
+	if (!message.content.startsWith(prefix)) return;
+	
+	let command = message.content.split(" ")[0];
+	command = command.slice(prefix.length);
+	
+	let args = message.content.split(" ").slice(1);
+    
+  if (command === "yorn") {
+	   if (message.member.hasPermission("Developer")) {
+		   const text = args.join(" ")
+		   if (text.length < 1) return message.channel.send("You aren't cool enough, sorry!");
+		   //const colour = args.slice(2).join("");
+		   const embed = new Discord.RichEmbed()
+		   .setColor(0x954D23)
+		   .setTitle("Yes or No")
+		   .setDescription(text);
+		   message.channel.send("@climbers")
+		   message.channel.send({embed})
+       .then(function (message) {
+       message.react("👍")
+       message.react("👎")
+	   }
 
 });  
-  client.on(`message`, message => {
-    if (message.content === '>yorn') {
-      let modRole = message.guild.roles.find("name", "Developer");
-      if(message.member.roles.has(modRole.id)) {
-      let announcement = args.join(" ");
-      const embed = new Discord.RichEmbed()
-      .setColor(0x00AE86)
-      .setTimestamp()
-      .addField(`Yes or No by ${message.author.username}`, `${announcement}`)
-      client.channels.find("name", "announcements").send(embed)
-      .then(function (message) {
-      message.react("👍")
-      message.react("👎")
-      })}}
-});
+ 
 
  
 client.login(process.env.BOT_TOKEN);

@@ -14,7 +14,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  client.user.setGame(`Climbing a mountain`);
+  bot.user.setGame(`Climbing a mountain`);
   console.log('Ready for expeditions!');
 })
 

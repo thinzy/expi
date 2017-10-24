@@ -11,7 +11,7 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/UtgK0tJ'];
 console.log(images.length);
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client('forceFetchUsers');
 
 client.on('ready', () => {
   client.user.setGame('Climbing a mountain');

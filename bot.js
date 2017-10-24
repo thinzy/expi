@@ -1,13 +1,17 @@
 var d = new Date();
-var images = ['https://imgur.com/mETXc2R', 'https://imgur.com/YJvo7Fb', 'https://imgur.com/2l52LK4', 'https://imgur.com/CYxOhyC', 'https://imgur.com/pt0Kd82', 'https://imgur.com/ExuGbkZ', 'https://imgur.com/D9dn2yy', 'https://imgur.com/gluYJeT', 'https://imgur.com/8AiNyVc', 'https://imgur.com/UtgK0tJ'];
-var image = images[Math.floor(Math.random() * (images.length))];
+var images = ['https://imgur.com/mETXc2R',
+              'https://imgur.com/YJvo7Fb',
+              'https://imgur.com/2l52LK4',
+              'https://imgur.com/CYxOhyC',
+              'https://imgur.com/pt0Kd82',
+              'https://imgur.com/ExuGbkZ',
+              'https://imgur.com/D9dn2yy',
+              'https://imgur.com/gluYJeT',
+              'https://imgur.com/8AiNyVc',
+              'https://imgur.com/UtgK0tJ'];
 console.log(images.length);
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
-function rand(images){
-    return items[~~(Math.random() * images.length)];
-}
 
 client.on('ready', () => {
   client.user.setGame('Climbing a mountain');

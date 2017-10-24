@@ -38,8 +38,10 @@ client.on('message', message => {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
     }
     if (message.content === '>climbers') {
-      message.reply(`${client.channels.getAll("name", "general")]}`);
+      var users = client.channels.getAll("name", "general");
+      message.reply(`${users}`);
     }
+    
 });    
  
 client.login(process.env.BOT_TOKEN);

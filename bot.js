@@ -42,26 +42,5 @@ client.on('message', message => {
     }
 });
   
-client.on(`message`, async (message) => {
-	if (message.author.bot) return;
-	if (!message.content.startsWith(prefix)) return;
-	
-	let command = message.content.split(" ")[0];
-	command = command.slice(prefix.length);
-	
-	let args = message.content.split(" ").slice(1);
-    
-  if (command === "yorn") {
-	   if (message.member.hasPermission("Developer")) {
-		   const text = args.join(" ")
-		   if (text.length < 1) return message.channel.send("You aren't cool enough, sorry!");
-		   //const colour = args.slice(2).join("");
-		   const embed = new Discord.RichEmbed()
-		   .setColor(0x954D23)
-		   .setTitle("Yes or No")
-		   .setDescription(text);
-		   message.channel.send("@climbers")
-		   message.channel.send({embed})
-};
 
 client.login(process.env.BOT_TOKEN);

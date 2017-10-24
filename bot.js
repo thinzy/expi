@@ -47,11 +47,11 @@ client.on('message', message => {
       .setColor(0x00AE86)
       .setTimestamp()
       .addField(`Yes or No by ${message.author.username}`, `${announcement}`)
-      client.channels.find("name", "bot_testing_room_2").sendEmbed(embed);
-      message.channel.sendMessage(`:ok_hand: Your very important message has been sent to #Announcements`);
+      client.channels.find("name", "bot_testing_room_2").sendEmbed(embed)
       .then(function (message) {
       message.react("👍")
       message.react("👎")
+      message.channel.sendMessage(`:ok_hand: Your very important message has been sent to #Announcements`)
       }})}
 });    
  

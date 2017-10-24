@@ -41,7 +41,7 @@ client.on('message', message => {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
     if (message.content === '>yorn') {
-      const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+      const args = message.content.slice(package.prefix.length).trim().split(/ +/g);
       const command = args.shift().toLowerCase();
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{}); 

@@ -67,7 +67,13 @@ client.on('message', message => {
     if (message.content === '>commands') {
       message.reply({embed});
     }
+  if (message.content === '>rating') {
+      message.reply('Rate the bot!');
+      message.react("😍");
+      message.react("💩");
+    }
 });
-  
+
+
 
 client.login(process.env.BOT_TOKEN);

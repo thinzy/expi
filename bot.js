@@ -68,7 +68,7 @@ client.on('message', message => {
       message.reply({embed});
     }
   if (message.content === '>rating') {
-      message.reply('Rate the bot!');
+      message.reply('Rate the bot!')
       message.react("😍");
       message.react("💩");
     }

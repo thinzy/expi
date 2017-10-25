@@ -12,6 +12,33 @@ var images = ['https://imgur.com/mETXc2R',
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ">"
+const embed = new Discord.RichEmbed()
+  .setTitle("This is your title, it can hold 256 characters")
+  .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x00AE86)
+  .setDescription("This is the main body of text, it can hold 2048 characters.")
+  .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
+  .setImage("http://i.imgur.com/yVpymuV.png")
+  .setThumbnail("http://i.imgur.com/p2qNFag.png")
+  /*
+   * Takes a Date object, defaults to current date.
+   */
+  .setTimestamp()
+  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+  .addField("This is a field title, it can hold 256 characters",
+    "This is a field value, it can hold 2048 characters.")
+  /*
+   * Inline fields may not display as inline if the thumbnail and/or image is too big.
+   */
+  .addField("Inline Field", "They can also be inline.", true)
+  /*
+   * Blank field, useful to create some space.
+   */
+  .addBlankField(true)
+  .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
 
 client.on('ready', () => {
   client.user.setGame(`Climbing a mountain`);
@@ -41,48 +68,8 @@ client.on('message', message => {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
     if (message.content === '>commands') {
-      message.reply({embed: {
-      color: '650FCB',
-      author: {
-      name: client.username,
-      icon_url: client.user.avatarURL
-      },
-      description: "Commands list",
-      fields: [{
-      name: ">play"
-      value: "Gives you the roblox game link"
-      },
-      {
-      name: ">group"
-      value: "Gives you the roblox group link"
-      },
-      {
-      name: ">climbers"
-      value: "Gives you the amount of climbers in the server"
-      },
-      {
-      name: ">date"
-      value: "Gives you the date, the timezone is EBST (Expi Bot Standard Time)"
-      },
-      {
-      name: ">ping"
-      value: "Shows you the latency"
-      },
-      {
-      name: ">rsummit"
-      value: "Shows you a random summit picture"
-      },
-      {
-      name: ">tussle"
-      value: "Fun CMD, the bot will ask if you wanna tussle"
-      }
-      ],
-      footer: {
-      icon_url: client.user.avatarURL,
-      text: "Created by Thinzy, for Newmentor"
-      }
+      message.reply({embed});
     }
-    });
 });
   
 

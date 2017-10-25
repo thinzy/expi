@@ -40,6 +40,49 @@ client.on('message', message => {
     if (message.content === '>climbers') {
       message.reply(`there are ${message.guild.memberCount} climbers!`);
     }
+    if (message.content === '>commands') {
+      message.reply({embed: {
+      color: 650fbc,
+      author: {
+      name: client.username,
+      icon_url: client.user.avatarURL
+      },
+      description: "Commands list",
+      fields: [{
+      name: ">play"
+      value: "Gives you the roblox game link"
+      },
+      {
+      name: ">group"
+      value: "Gives you the roblox group link"
+      },
+      {
+      name: ">climbers"
+      value: "Gives you the amount of climbers in the server"
+      },
+      {
+      name: ">date"
+      value: "Gives you the date, the timezone is EBST (Expi Bot Standard Time)"
+      },
+      {
+      name: ">ping"
+      value: "Shows you the latency"
+      },
+      {
+      name: ">rsummit"
+      value: "Shows you a random summit picture"
+      },
+      {
+      name: ">tussle"
+      value: "Fun CMD, the bot will ask if you wanna tussle"
+      }
+      ],
+      footer: {
+      icon_url: client.user.avatarURL,
+      text: "Created by Thinzy, for Newmentor"
+      }
+    }
+    });
 });
   
 

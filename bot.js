@@ -13,32 +13,29 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ">"
 const embed = new Discord.RichEmbed()
-  .setTitle("This is your title, it can hold 256 characters")
-  .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
+  .setTitle("Commands List")
+  .setAuthor("Expi | Expedition Bot", "https://imgur.com/qVuDedv.png")
   .setColor(0x00AE86)
-  .setDescription("This is the main body of text, it can hold 2048 characters.")
-  .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
-  .setImage("http://i.imgur.com/yVpymuV.png")
-  .setThumbnail("http://i.imgur.com/p2qNFag.png")
-  /*
-   * Takes a Date object, defaults to current date.
-   */
+  .setDescription("The complete commands list, the most useful commands are at the top")
+  .setFooter("Created by Thinzy, for Newmentor", "https://imgur.com/qVuDedv.png")
+  .setImage("https://imgur.com/aoISFl6.png")
+  .setThumbnail("https://imgur.com/qVuDedv.png")
   .setTimestamp()
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-  .addField("This is a field title, it can hold 256 characters",
-    "This is a field value, it can hold 2048 characters.")
-  /*
-   * Inline fields may not display as inline if the thumbnail and/or image is too big.
-   */
-  .addField("Inline Field", "They can also be inline.", true)
-  /*
-   * Blank field, useful to create some space.
-   */
-  .addBlankField(true)
-  .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
+  .addField(">play",
+    "Gives you the link to play Mount Kilimanjaro")
+  .addField(">group",
+     "Gives you the link to the group of Mount Kilimanjaro",)
+  .addField(">climbers", 
+     "Shows you the amount of climbers in the server",)
+  .addField(">date", 
+     "Tells you the date and time, the timezone is EBST (Expi Bot Standard Time)",)
+  .addField(">ping", 
+     "Shows you the latency of the bot",)
+  .addField(">rsummit", 
+     "Gives you random summit pictures",)
+  .addField(">tussle", 
+     "The bot will ask if you wanna tussle",);
 
 client.on('ready', () => {
   client.user.setGame(`Climbing a mountain`);

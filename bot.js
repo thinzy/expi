@@ -25,17 +25,19 @@ const embed = new Discord.RichEmbed()
   .addField(">play",
     "Gives you the link to play Mount Kilimanjaro")
   .addField(">group",
-     "Gives you the link to the group of Mount Kilimanjaro",)
+     "Gives you the link to the group of Mount Kilimanjaro")
   .addField(">climbers", 
-     "Shows you the amount of climbers in the server",)
+     "Shows you the amount of climbers in the server")
   .addField(">date", 
-     "Tells you the date and time, the timezone is EBST (Expi Bot Standard Time)",)
+     "Tells you the date and time, the timezone is EBST (Expi Bot Standard Time)")
   .addField(">ping", 
-     "Shows you the latency of the bot",)
+     "Shows you the latency of the bot")
+  .addField(">rate", 
+     "Give Expi a rating")
   .addField(">rsummit", 
-     "Gives you random summit pictures",)
+     "Gives you random summit pictures")
   .addField(">tussle", 
-     "The bot will ask if you wanna tussle",);
+     "The bot will ask if you wanna tussle");
 
 client.on('ready', () => {
   client.user.setGame(`Climbing a mountain`);
@@ -67,9 +69,9 @@ client.on('message', message => {
     if (message.content === '>commands') {
       message.reply({embed});
     }
-  if (message.content === '>rating') {
+  if (message.content === '>rate') {
       message.reply('Rate the bot!')
-      .then function(message) {
+      .then (function(message) {
       message.react("❤")
       message.react("💩")
       });  

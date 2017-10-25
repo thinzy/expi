@@ -42,7 +42,7 @@ client.on('message', message => {
     }
     if (message.content === '>commands') {
       message.reply({embed: {
-      color: 650fbc,
+      color: '650FCB',
       author: {
       name: client.username,
       icon_url: client.user.avatarURL

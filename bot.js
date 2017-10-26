@@ -46,7 +46,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '>ping') {
-    	message.reply(':ping_pong: pong!');
+    	message.reply(':ping_pong: Pong! It took ${m.createdTimestamp - message.createdTimestamp}ms to climb the mountain!');
   	}
     if (message.content === '>tussle') {
     	message.reply('ya wanna tussle?');
@@ -69,7 +69,7 @@ client.on('message', message => {
     if (message.content === '>commands') {
       message.reply({embed});
     }
-  if (message.content === '>rate') {
+    if (message.content === '>rate') {
       message.reply('Rate the bot!')
       .then (function(message) {
       message.react("❤")

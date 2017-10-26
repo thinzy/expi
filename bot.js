@@ -46,7 +46,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '>ping') {
-      const m = await message.channel.send("Ping?");
+      const m = await message.send("Ping?");
     	m.edit(`:ping_pong: Pong! It took ${m.createdTimestamp - message.createdTimestamp}ms to climb the mountain!`);
   	}
     if (message.content === '>tussle') {

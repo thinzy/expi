@@ -46,8 +46,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '>ping') {
-      const m = await message.reply("Ping?");
-    	m.edit(`:ping_pong: Pong! It took ${m.createdTimestamp - message.createdTimestamp}ms to climb the mountain!`);
+    	message.reply(`:ping_pong: Pong! It took ${Math.round(client.ping)}ms to climb the mountain!`);
   	}
     if (message.content === '>tussle') {
     	message.reply('ya wanna tussle?');

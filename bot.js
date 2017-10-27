@@ -8,6 +8,14 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/D9dn2yy',
               'https://imgur.com/gluYJeT',
               'https://imgur.com/8AiNyVc',
+              'https://imgur.com/QR3q6ck',
+              'https://imgur.com/wBJZGr7',
+              'https://imgur.com/WZp9B3q',
+              'https://imgur.com/0JD8q2g',
+              'https://imgur.com/zqFjeNd',
+              'https://imgur.com/CnkxDKo',
+              'https://imgur.com/zXxoZmL',
+              'https://imgur.com/LZlay6C',
               'https://imgur.com/UtgK0tJ'];
 const Discord = require('discord.js');
 const client = new Discord.Client();

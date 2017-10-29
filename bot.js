@@ -19,7 +19,6 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/UtgK0tJ'];
 const Discord = require('discord.js');
 const client = new Discord.Client();
-role = message.server.roles.get("name", 'Role1');
 const prefix = ">"
 const embed = new Discord.RichEmbed()
   .setTitle("Commands List")

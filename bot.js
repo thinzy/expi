@@ -91,7 +91,7 @@ client.on('message', message => {
     if (err) {
         console.log(err);
       message.reply('Error, cannot verify at this time, sorry!');
-    }}
+    }})
 });
 
 

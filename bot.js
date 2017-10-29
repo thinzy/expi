@@ -85,14 +85,7 @@ client.on('message', message => {
       message.react("💩")
       });  
     }
-    if (message.content === '>verify') {
-      message.reply('You have been verified!');
-      client.addMemberToRole(user, role, function (err) {
-    if (err) {
-        console.log(err);
-      message.reply('Error, cannot verify at this time, sorry!');
-    }})
-};
+});
 
 
 

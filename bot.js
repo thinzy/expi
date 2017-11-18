@@ -84,6 +84,8 @@ client.on('message', message => {
       message.react("💩")
       });  
     }
+    if (message.content === '>stop3xpi') {
+    client.channels.get('352513633693073408').sendMessage('Expedition Canceled, sorry in advanced!');
 });
 
 

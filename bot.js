@@ -94,6 +94,9 @@ client.on('message', message => {
     if (message.content === '>ett') {
      message.reply('https://imgur.com/a/iisf8');
     }
+    if (message.content === '>onl1n3') {
+     client.channels.get('352513398904324100').send('I am coming on too, expect me to be there :D');
+    }
 });
 
 

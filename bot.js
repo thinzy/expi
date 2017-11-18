@@ -85,7 +85,10 @@ client.on('message', message => {
       });  
     }
     if (message.content === '>stop3xpi') {
-    client.channels.get('352513633693073408').send('Expedition Canceled, sorry in advance!');
+     client.channels.get('352513633693073408').send('Expedition Canceled, sorry in advance!');
+    }
+    if (message.content === '>ett') {
+     message.reply('https://imgur.com/a/iisf8');
     }
 });
 

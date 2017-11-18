@@ -38,6 +38,8 @@ const embed = new Discord.RichEmbed()
      "Gives you the link to the group of Mount Kilimanjaro")
   .addField(">climbers", 
      "Shows you the amount of climbers in the server")
+  .addField(">ett",
+     "Shows you the Expedition Time Table")
   .addField(">date", 
      "Tells you the date and time, the timezone is EBST (Expi Bot Standard Time)")
   .addField(">ping", 

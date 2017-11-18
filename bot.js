@@ -16,6 +16,8 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/CnkxDKo',
               'https://imgur.com/zXxoZmL',
               'https://imgur.com/LZlay6C',
+              'https://imgur.com/a/aMr4M',
+              'https://imgur.com/a/uBXMI',
               'https://imgur.com/UtgK0tJ'];
 const Discord = require('discord.js');
 const client = new Discord.Client();

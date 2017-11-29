@@ -21,9 +21,9 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/UtgK0tJ'];
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = ">"
-const sql = require('sqlite3').verbose();
+const sql = require('sqlite');
 sql.open("./score.sqlite");
+const prefix = ">"
 const embed = new Discord.RichEmbed()
   .setTitle("Commands List")
   .setAuthor("Expi | Expedition Bot", "https://imgur.com/qVuDedv.png")

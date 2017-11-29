@@ -22,7 +22,7 @@ var images = ['https://imgur.com/mETXc2R',
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ">"
-const sql = require("sqlite");
+const sql = require("sqlite/legacy");
 sql.open("./score.sqlite");
 const embed = new Discord.RichEmbed()
   .setTitle("Commands List")

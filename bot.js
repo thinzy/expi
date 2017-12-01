@@ -21,8 +21,6 @@ var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/UtgK0tJ'];
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const sql = require('sqlite');
-sql.open("./score.sqlite");
 const prefix = ">"
 const embed = new Discord.RichEmbed()
   .setTitle("Commands List")
@@ -101,41 +99,6 @@ client.on('message', message => {
     if (message.content === '>onl1n3') {
      client.channels.get('352513398904324100').send('I am coming on too, expect me to be there :D');
     }
-    
-    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
-    if (!row) {
-      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
-    } else {
-      let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
-      if (curLevel > row.level) {
-        row.level = curLevel;
-        sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
-        message.reply(`well done!You have leveled up to **${curLevel}**! Keep on climbin'!`);
-      }
-      sql.run(`UPDATE scores SET points = ${row.points + 1} WHERE userId = ${message.author.id}`);
-    }
-  }).catch(() => {
-    console.error;
-    sql.run("CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, level INTEGER)").then(() => {
-      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
-    });
-  });
-
-  if (!message.content.startsWith(prefix)) return;
-
-  if (message.content.startsWith(prefix + "level")) {
-    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
-      if (!row) return message.reply("Your current level is 0");
-      message.reply(`Your current level is ${row.level}`);
-    });
-  } else
-
-  if (message.content.startsWith(prefix + "points")) {
-    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
-      if (!row) return message.reply("sadly you do not have any points yet!");
-      message.reply(`you currently have ${row.points} points, good going!`);
-    });
-  }
 });
 
 

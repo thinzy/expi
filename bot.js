@@ -101,6 +101,11 @@ client.on('message', message => {
       message.delete();
       client.channels.get('352513398904324100').send('I am coming on too, expect me to be there :D');
     }
+    if (message.content === '>onl1n32') {
+      message.delete();
+      message.send('Expi Succesfully Online', { tts: true });
+      client.user.setGame(`Roblox`)
+    }
 });
 
 

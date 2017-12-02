@@ -101,13 +101,12 @@ client.on('message', message => {
     if (message.content === '>onl1n3') {
      client.channels.get('352513398904324100').send('I am coming on too, expect me to be there :D');
     }
-    if (message.content === ">say") {
-    let text = args.slice(1).join(" ");
-    message.delete();
-    message.channel.send(text);
-    }
 });
-
+if(command === "say"){
+  let text = args.slice(1).join(" ");
+  message.delete();
+  message.channel.send(text);
+}
 
 
 client.login(process.env.BOT_TOKEN);

@@ -1,4 +1,3 @@
-var d = new Date();
 var images = ['https://imgur.com/mETXc2R',
               'https://imgur.com/YJvo7Fb',
               'https://imgur.com/2l52LK4',
@@ -72,7 +71,8 @@ client.on('message', message => {
     	message.reply('https://www.roblox.com/My/Groups.aspx?gid=3457860');
   	}
     if (message.content === '>date') {
-    	message.reply(`${d}`);
+    	var d = new Date();
+      message.reply(`${d}`);
   	}
     if (message.content === '>rsummit') {
       message.reply(`${images[Math.floor(Math.random() * (images.length))]}`);
@@ -91,13 +91,15 @@ client.on('message', message => {
       });  
     }
     if (message.content === '>stop3xpi') {
+     message.delete();
      client.channels.get('352513633693073408').send('Expedition Canceled, sorry in advance!');
     }
     if (message.content === '>ett') {
      message.reply('https://imgur.com/a/iisf8');
     }
     if (message.content === '>onl1n3') {
-     client.channels.get('352513398904324100').send('I am coming on too, expect me to be there :D');
+      message.delete();
+      client.channels.get('352513398904324100').send('I am coming on too, expect me to be there :D');
     }
 });
 

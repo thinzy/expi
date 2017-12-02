@@ -22,6 +22,8 @@ var images = ['https://imgur.com/mETXc2R',
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ">"
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
 const embed = new Discord.RichEmbed()
   .setTitle("Commands List")
   .setAuthor("Expi | Expedition Bot", "https://imgur.com/qVuDedv.png")
@@ -98,6 +100,11 @@ client.on('message', message => {
     }
     if (message.content === '>onl1n3') {
      client.channels.get('352513398904324100').send('I am coming on too, expect me to be there :D');
+    }
+    if (message.content === ">say") {
+    let text = args.slice(1).join(" ");
+    message.delete();
+    message.channel.send(text);
     }
 });
 

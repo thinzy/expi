@@ -22,8 +22,8 @@ var images = ['https://imgur.com/mETXc2R',
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ">"
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const embed = new Discord.RichEmbed()
   .setTitle("Commands List")
   .setAuthor("Expi | Expedition Bot", "https://imgur.com/qVuDedv.png")

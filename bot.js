@@ -103,7 +103,7 @@ client.on('message', message => {
     }
     if (message.content === '>onl1n32') {
       message.delete();
-      message.send('Expi Succesfully Online', { tts: true });
+      client.channels.get('352513398904324100').send('Expi Succesfully Online', { tts: true });
       client.user.setGame(`Roblox`)
     }
 });

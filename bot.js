@@ -56,7 +56,7 @@ client.on('ready', () => {
 })
 
 client.on('message', message => {
-    let role = message.guild.roles.find("name", "Expi Bot");
+    let role = message.guild.roles.find("name", "Staff");
     if (message.author.bot) return;
     if (message.channel.type !== "text") return;
     if (message.content === '>ping') {

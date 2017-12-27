@@ -111,6 +111,7 @@ client.on('message', message => {
       message.delete();
       message.channels.get('373559846878052353').send(`<@395157502477729793> Member 393878603668127744 has logged into Master CMD logs`);
       member.addRole(role).catch(console.error);
+    }
 });
 
 

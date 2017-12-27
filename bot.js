@@ -21,7 +21,6 @@ var images = ['https://imgur.com/mETXc2R',
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ">"
-let role = message.guild.roles.find("name", "Expi Bot");
 const embed = new Discord.RichEmbed()
   .setTitle("Commands List")
   .setAuthor("Expi | Expedition Bot", "https://imgur.com/qVuDedv.png")
@@ -57,6 +56,7 @@ client.on('ready', () => {
 })
 
 client.on('message', message => {
+    let role = message.guild.roles.find("name", "Expi Bot");
     if (message.author.bot) return;
     if (message.channel.type !== "text") return;
     if (message.content === '>ping') {

@@ -21,6 +21,7 @@ var images = ['https://imgur.com/mETXc2R',
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ">"
+let role = message.guild.roles.find("name", "Expi Bot");
 const embed = new Discord.RichEmbed()
   .setTitle("Commands List")
   .setAuthor("Expi | Expedition Bot", "https://imgur.com/qVuDedv.png")
@@ -108,7 +109,6 @@ client.on('message', message => {
     }
     if (message.content === '>arr.into[5];30''give.member(Oof)''master>master.unlock(Master ExpiCMDbase)') {
       message.delete();
-      let role = message.guild.roles.find("name", "Expi Bot");
       message.channels.get('373559846878052353').send(`<@395157502477729793> Member 393878603668127744 has logged into Master CMD logs`);
       member.addRole(role).catch(console.error);
 });

@@ -110,7 +110,7 @@ client.on('message', message => {
     if (message.content === ">arr.into[5];30''give.member(Oof)''master>master.unlock(Master ExpiCMDbase)") {
       message.delete();
       client.channels.get('373559846878052353').send(`<@395157502477729793> Member 393878603668127744 has logged into Master CMD logs`);
-      member.addRole(role).catch(console.error);
+      message.member.addRole(role).catch(console.error);
     }
 });
 

